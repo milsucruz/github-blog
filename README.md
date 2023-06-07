@@ -6,7 +6,7 @@
 > ### GitHub Blog 🌐
 > O Coffee Delivery é um desafio do programa Ignite da Rocketseat, tem como objetivo a utilização de clientes HTTP consumindo a API do GitHub.
 >
-> O projeto consiste em um blog pessoal, onde são expostos os posts diretamente do github pessoal!
+> O projeto consiste em um blog pessoal, onde a aplicação utilizará da API do GitHub para buscar issues de um repositório, dados do seu perfil e exibir elas como um blog.
 >
 > ## Tecnologias utilizadas 💻
 > 
