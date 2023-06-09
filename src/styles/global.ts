@@ -8,8 +8,23 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: ${(props) => props.theme['base-background']};
-    font-family: 'Nunito', sans-serif;
     -webkit-font-smoothing: antialiased;
+    color: ${(props) => props.theme['base-text']};
+    background: ${(props) => props.theme['base-background']};
+  }
+
+  body, input, button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    line-height: 1.625rem;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    cursor: pointer;
   }
 `
