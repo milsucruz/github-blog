@@ -1,4 +1,5 @@
 import { PostHeaderContainer } from './styles'
+import { dateFormatter } from '../../../../utils/formatter'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -8,38 +9,53 @@ import {
   faComment,
 } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { IPost } from '../../../Home'
+import { Spinner } from '../../../../components/Spinner'
 
-export function PostHeader() {
+interface PostHeaderProps {
+  postData: IPost
+  isLoading: boolean
+}
+
+export function PostHeader({ isLoading, postData }: PostHeaderProps) {
+  const date = dateFormatter(postData.created_at)
+
   return (
     <PostHeaderContainer>
-      <header>
-        <a href="/">
-          <FontAwesomeIcon icon={faChevronLeft} fontSize={12} />
-          Voltar
-        </a>
-        <a href="https://github.com/milsucruz" target="_blank" rel="noreferrer">
-          Ver no GitHub
-          <FontAwesomeIcon icon={faUpRightFromSquare} fontSize={12} />
-        </a>
-      </header>
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <>
+          <header>
+            <a href="/">
+              <FontAwesomeIcon icon={faChevronLeft} fontSize={12} />
+              Voltar
+            </a>
+            <a href={postData.html_url} target="_blank" rel="noreferrer">
+              Ver no GitHub
+              <FontAwesomeIcon icon={faUpRightFromSquare} fontSize={12} />
+            </a>
+          </header>
 
-      <div>
-        <h2>JavaScript data types and data structures</h2>
+          <div>
+            <h2>{postData.title}</h2>
 
-        <ul>
-          <li>
-            <FontAwesomeIcon icon={faGithub} />
-            milsucruz
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faCalendarDay} />
-            Há 1 dia
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faComment} />5 comentários
-          </li>
-        </ul>
-      </div>
+            <ul>
+              <li>
+                <FontAwesomeIcon icon={faGithub} />
+                {postData.user.login}
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faCalendarDay} />
+                {date}
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faComment} /> {postData.comments}
+              </li>
+            </ul>
+          </div>
+        </>
+      )}
     </PostHeaderContainer>
   )
 }
