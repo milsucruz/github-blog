@@ -1,7 +1,9 @@
+/* eslint-disable react/no-children-prop */
 import { NavLink } from 'react-router-dom'
 import { PostCardContent } from './styles'
 import { IPost } from '../..'
 import { dateFormatter } from '../../../../utils/formatter'
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 
 interface PostProps {
   post: IPost
@@ -18,7 +20,9 @@ export function PostCard({ post }: PostProps) {
           <span>{date}</span>
         </div>
 
-        <p>{post.body}</p>
+        <p>
+          <ReactMarkdown children={post.body} />
+        </p>
       </PostCardContent>
     </NavLink>
   )
