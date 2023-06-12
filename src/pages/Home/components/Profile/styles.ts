@@ -52,6 +52,7 @@ export const ProfileHeader = styled.div`
 export const ProfileIcons = styled.ul`
   display: flex;
   gap: 1.5rem;
+  margin-top: auto;
 
   list-style: none;
 
