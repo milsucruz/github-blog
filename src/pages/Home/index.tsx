@@ -31,8 +31,6 @@ export function Home() {
         const response = await api.get(
           `/search/issues?q=${query}%20repo:${username}/${repoName}`,
         )
-
-        console.log(response.data)
         setPosts(response.data.items)
       } finally {
         setIsLoading(false)
@@ -49,7 +47,7 @@ export function Home() {
     <HomeContainer>
       <Profile />
       <PostsCardsContainer>
-        <SearchForm />
+        <SearchForm postsLength={posts.length} getPosts={getPosts} />
         <PostsCardsList>
           {posts.map((post) => (
             <PostCard key={post.number} post={post} />
