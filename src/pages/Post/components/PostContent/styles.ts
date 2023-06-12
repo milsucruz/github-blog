@@ -5,16 +5,18 @@ export const PostContentContainer = styled.section`
   flex-direction: column;
   gap: 1rem;
   padding: 2.5rem 2rem;
-  margin-bottom: 8rem;
+  margin-bottom: 10rem;
 
   img {
     width: 100%;
+    margin: 1rem 0 1rem;
   }
 
   h1,
   h2,
   h3 {
     color: ${(props) => props.theme.blue};
+    margin: 1rem 0 1rem;
   }
 
   ul {
@@ -32,7 +34,6 @@ export const PostContentContainer = styled.section`
       margin: 0 !important;
 
       code {
-        font-family: 'FiraCode', monospace !important;
         line-height: 160% !important;
       }
     }
