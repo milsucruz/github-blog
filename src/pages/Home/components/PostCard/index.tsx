@@ -3,7 +3,7 @@ import { PostCardContent } from './styles'
 
 export function PostCard() {
   return (
-    <NavLink to="/posts">
+    <NavLink to="/post">
       <PostCardContent>
         <div>
           <h2>JavaScript data types and data structures</h2>
