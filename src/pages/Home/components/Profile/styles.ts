@@ -65,7 +65,8 @@ export const ProfileIcons = styled.ul`
   }
 
   svg {
-    opacity: 0.4;
+    color: ${(props) => props.theme['base-label']};
+
     font-size: 1.125rem;
   }
 `
