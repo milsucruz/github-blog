@@ -1,5 +1,5 @@
 ![Capa](https://github.com/milsucruz/README-model/assets/103121417/5e7a0e6a-15ef-4dc4-8882-01dc5ef4afc2)
-> Status: Em desenvolvimento ⚠️
+> Status: Concluído 🚀
 
 > ## Sobre 📖
 > 
@@ -23,6 +23,18 @@
 > [React Router Dom](https://reactrouter.com/en/main)
 >
 > [Font Awesome](https://fontawesome.com/start)
+>
+> [React Hook Form](https://react-hook-form.com/)
+> 
+> [Zod](https://github.com/colinhacks/zod)
+> 
+> [Axios](https://axios-http.com/ptbr/docs/intro)
+> 
+> [Moment](https://momentjs.com/)
+>
+> [React Markdown](https://github.com/remarkjs/react-markdown)
+> 
+> [React Syntax Highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter)
 
 > ## Como executar ⚙️
 
