@@ -41,7 +41,7 @@
 > ### No terminal, execute:
 >> Para clonar o repositório:
 >> 
->>  ```git clone https://github.com/milsucruz/coffee-delivery-ts.git```
+>>  ```https://github.com/milsucruz/github-blog.git```
 >
 >> Instalando as dependências:
 >>
